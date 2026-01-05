@@ -1,0 +1,13 @@
+{
+  "term": "Installinator",
+  "definition": "A step in the MUPdate process that fetches data over the bootstrap network to install on the local M.2 device. See RFD 345 SP-Driven Gimlet Recovery (also MUPdate).",
+  "mentions": [
+    {
+      "number": 345,
+      "text": "RFD 345 SP-Driven Gimlet Recovery (also MUPdate)"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

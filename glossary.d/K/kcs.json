@@ -1,0 +1,8 @@
+{
+  "term": "KCS",
+  "definition": "Keyboard Controller Style. A type of interface that may be used by the operating system to issue and retrieve IPMI commands.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

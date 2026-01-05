@@ -1,0 +1,8 @@
+{
+  "term": "SPD",
+  "definition": "Serial Presence Detect. Refers to a standardized method of accessing information on DIMMs such as their EEPROMs. This information is available over SMBus.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

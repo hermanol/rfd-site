@@ -1,0 +1,8 @@
+{
+  "term": "SAS",
+  "definition": "Serial Attached SCSI. SAS devices are a drive interface that has been used by modern hard drives and solid state drives. It is an evolution of the SCSI command set; however, the physical interfaces have changed substantially from the original SCSI implementations.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

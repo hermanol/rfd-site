@@ -1,0 +1,8 @@
+{
+  "term": "PSU",
+  "definition": "Power Supply Unit. A device which accepts either AC or DC power and transforms it into various power lines that are required for the system board, drives, expansion cards, and other components in the platform.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

@@ -1,0 +1,8 @@
+{
+  "term": "EMCAv2",
+  "definition": "Extended Machine Check Architecture v2. An extension to the x86 MCA architecture that allows for firmware to intercept, consume, and enhance, MCA events.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

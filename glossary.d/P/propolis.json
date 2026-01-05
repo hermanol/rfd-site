@@ -1,0 +1,26 @@
+{
+  "term": "Propolis",
+  "definition": "Propolis is the userspace for illumos’s hypervisor: Bhyve. Propolis is responsible for creating a virtual machine abstraction on top of the underlying physical resources - it utilizes the sled’s physical CPUs, the distributed block storage abstraction, and an interface to the network switch to create this virtual abstraction. Propolis operates \"transiently\", acting on resources stored in the durable storage layers, rather than creating new resources on its own. We can see this pattern with both NICs and Disks, though it applies to other peripherals: metadata about these devices must be stored in the control plane database, meaning allocation of these objects will be managed by Nexus. See more information in RFD 152 Sled Agent and Propolis APIs.",
+  "mentions": [
+    {
+      "number": 152,
+      "text": "Sled\nAgent and Propolis APIs]"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/propolis",
+      "text": "Propolis"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Bhyve",
+      "text": "Bhyve"
+    },
+    {
+      "url": "https://github.com/oxidecomputer/rfd/tree/0152/rfd/0152#24-propolis",
+      "text": "RFD 152 Sled Agent and Propolis APIs"
+    }
+  ],
+  "public": true
+}

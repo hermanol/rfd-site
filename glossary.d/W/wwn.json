@@ -1,0 +1,8 @@
+{
+  "term": "WWN",
+  "definition": "World Wide Name. A unique identifier that is assigned to a device. Commonly used in SAS devices both for identification and addressing.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

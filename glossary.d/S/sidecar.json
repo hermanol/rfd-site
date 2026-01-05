@@ -1,0 +1,18 @@
+{
+  "term": "Sidecar",
+  "definition": "Sidecar is Oxide's first generation rack level switch. There are two sidecars per sled. See RFD 58 Rack Switch.",
+  "mentions": [
+    {
+      "number": 58,
+      "text": "RFD 58 Rack Switch"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/hardware-sidecar",
+      "text": "Sidecar"
+    }
+  ],
+  "public": true
+}

@@ -1,0 +1,8 @@
+{
+  "term": "HBA",
+  "definition": "Host Bus Adapter. A device which is used to bridge two different environments and send commands to devices on that bus. The most common HBAs are disk controllers. For example, a SAS HBA provides a mean for systems software to send SAS commands to devices on the SAS fabric.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

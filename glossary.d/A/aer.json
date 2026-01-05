@@ -1,0 +1,8 @@
+{
+  "term": "AER",
+  "definition": "Advanced Error Reporting. An optional form of error reporting provided by PCI express devices that allows for more fine-grained error reporting and response.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

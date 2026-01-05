@@ -1,0 +1,8 @@
+{
+  "term": "Backplane",
+  "definition": "The backplane of a system is often a discrete FRU that exists in the system that is used to connect all of the storage (whether SATA, SAS, NVMe) in the system to a set of ports on either the system board or distinct expansion cards. The backplane is wired to a number of 'bays'. Each bay can house one device, though some bays can house multiple devices. The bays are usually built into the chassis. Today, most backplanes come in two different forms. They are either considered passive devices or active devices. In the case of passive devices, they exist primarily to pass through the electrical wiring of storage devices. Active backplanes have components that actively participate and may modify the transmitted data. For example, this is performed by SAS expanders and PCIe switches.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

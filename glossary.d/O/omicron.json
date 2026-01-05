@@ -1,0 +1,18 @@
+{
+  "term": "Omicron",
+  "definition": "Omicron is an umbrella term for Oxide's control plane implementation. See RFD 61 Control Plane Architecture and Design.",
+  "mentions": [
+    {
+      "number": 61,
+      "text": "RFD 61 Control Plane Architecture and\nDesign"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/omicron/",
+      "text": "Omicron"
+    }
+  ],
+  "public": true
+}

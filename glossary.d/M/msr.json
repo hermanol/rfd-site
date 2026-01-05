@@ -1,0 +1,8 @@
+{
+  "term": "MSR",
+  "definition": "Model Specific Register. A non-architectural register on the CPU whose actions vary based on CPU model.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

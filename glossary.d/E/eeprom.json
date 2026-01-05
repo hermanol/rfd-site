@@ -1,0 +1,8 @@
+{
+  "term": "EEPROM",
+  "definition": "Electrically Erasable Programmable Read-Only Memory. A class of non-volatile memory that exists on devices, but optionally allows for bytes to be rewritten by the system.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

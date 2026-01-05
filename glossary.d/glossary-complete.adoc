@@ -1,0 +1,784 @@
+= Intro
+:toc: left
+
+This document is a (somwhat lossy) reformulation of
+https://docs.google.com/document/d/14eoa6OgB93ZFhr7Wd2bwMY3jD-p_oicsy0lh8xoLlto/edit?folder=0AI_pfOlGjQPpUk9PVA#heading=h.5efx1bm5j2xb[Dave's bootstrap documentation]
+as he came up to speed at Oxide.
+
+It reorganizes that work into a glossary of terms for technical topics related
+to Oxide. This is a work in progress. Some of this might not be accurate!
+Improvements and corrections are welcome.
+
+
+Many additional glossary terms are taken from the https://github.com/joyent/dogpatch/blob/master/RAS.adoc#glossary[dogpatch glossary].
+
+[glossary]
+== Oxide Terms
+
+[[glos-blueprints]]Blueprints::
+
+Blueprints are very detailed descriptions of the intended state of the system.
+See https://rfd.shared.oxide.computer/rfd/373[RFD 373 Reliable Persistent Workflows].
+
+[[glos-bootstrap-agent]]Bootstrap Agent::
+
+A
+https://github.com/oxidecomputer/omicron/tree/main/omicron-bootstrap-agent[bootstrap
+agent] will run on each server (including those functioning as switches) to
+establish rack-level trust, unlock storage, launch the sled agent, and configure
+new devices.
+
+[[glos-Cosmo]]Cosmo::
+
+https://github.com/oxidecomputer/hardware-cosmo[Cosmo] is the name of Oxide's second generation server <<glos-sled, sled>>. It is responsible for running all of our customer workloads and the control plane itself. See https://rfd.shared.oxide.computer/rfd/0393[RFD 0393 SP5 Sled - Cosmo].  Cosmo uses a AMD Zen 5 Turin CPU.
+
+[[glos-CRU]]CRU::
+
+Customer Replaceable Unit
+
+[[glos-Crucible]]Crucible::
+
+https://github.com/oxidecomputer/crucible[Crucible] is a prototype implementation of Oxide's block storage system.
+
+[[glos-Cubby]]Cubby::
+
+Cubby may refer to one of two things.
+
+* The physical electro-mechanical part (<<glos-FRU, FRU>>) in the system. It is
+  2 OU high and takes up the full width of the rack and is the receptacle upon
+  which two <<glos-Sled, sleds>> are inserted.  An Oxide Rack contains 16 of
+  these parts.
+
+* Each of the two receptacles on each physical cubby.  An Oxide Rack contains
+  32 of these receptacles.  "Sled 30" and "Cubby 30" may both be used to refer
+  to the top left Sled.
+
+[[glos-Dendrite]]Dendrite::
+
+https://github.com/oxidecomputer/dendrite[Dendrite] contains all software needed to manage the Oxide switch, <<glos-Sidecar, Sidecar>>. 
+
+[[glos-Dropshot]]Dropshot::
+
+https://github.com/oxidecomputer/dropshot[Dropshot] is Oxide's web framework in Rust.
+
+[[glos-FRU]]FRU::
+
+Field Replaceable Unit.  Similar to a <<glos-CRU, CRU>>, but serviced only by an Oxide technician.
+
+[[glos-Gemini]]Gemini::
+
+Gemini is the Oxide term for the <<glos-Hardware-RoT, RoT>> + <<glos-SP, SP>>.
+See https://github.com/oxidecomputer/rfd/tree/master/rfd/0007[RFD 7 Hardware Root of Trust  Silicon] and https://github.com/oxidecomputer/rfd/tree/0008/rfd/0008[RFD 8 Service
+Processor (SP)].
+
+[[glos-Gimlet]]Gimlet::
+
+https://github.com/oxidecomputer/hardware-gimlet[Gimlet] is the name of Oxide's first generation server <<glos-sled, sled>>. It is responsible for running all of our customer workloads and the control plane itself. See https://rfd.shared.oxide.computer/rfd/0046[RFD 46 Server Sled 'Gimlet'].  Gimlet uses a AMD Zen 3 Milan CPU.
+
+[[glos-Grapefruit]]Grapefruit::
+
+A development board for work with <<glos-Cosmo>>.  See https://rfd.shared.oxide.computer/rfd/461[RFD 461 Grapefruit Dev Board].
+
+[[glos-Helios]]Helios::
+
+https://github.com/oxidecomputer/helios[Helios] is Oxide's host operating system based on illumos. See https://rfd.shared.oxide.computer/rfd/0026[Host Operating System & Hypervisor].
+
+[[glos-Installinator]]Installinator::
+
+A step in the <<glos-MUPdate, MUPdate>> process that fetches data over the
+bootstrap network to install on the local M.2 device. See https://rfd.shared.oxide.computer/rfd/345[RFD 345 SP-Driven Gimlet Recovery (also MUPdate)].
+
+[[glos-Hubris]]Hubris::
+
+https://github.com/oxidecomputer/hubris[Hubris] is Oxide's microcontroller operating system. See https://rfd.shared.oxide.computer/rfd/0041[RFD 41 Custom microcontroller OS design].
+
+[[glos-Humility]]Humility::
+
+https://github.com/oxidecomputer/humility[Humility] is the debugger for <<glos-Hubris, Hubris>>.
+
+[[glos-MSG]]MGS::
+
+The management gateway service (MGS) is the gateway between the <<glos-Omicron, control plane>>
+and/or wicketd to <<glos-SP, SPs>> on the management network. It runs a <<glos-Dropshot,
+Dropshot>> server on the bootstrap network where it translates commands into
+messages that it sends on the management network (i.e. to SPs).
+
+[[glos-MUPdate]]MUPdate::
+
+The Minimum Upgradable Product Updater.  See https://rfd.shared.oxide.computer/rfd/326[RFD 326 The Minimum Upgradable Product (MUP)].
+
+[[glos-Nexus]]Nexus::
+
+https://github.com/oxidecomputer/omicron/tree/main/omicron-nexus[Nexus] is a
+monolithic program, living in the <<glos-Omicron, Omicron>> repo and serving
+primary control plane functionality. Nexus hosts all user-facing APIs (both
+operator and customer) and also provides APIs internal to the rack for other
+components to report faults, generate alerts, and so on. Nexus is also
+responsible for background control plane activity, including utilization
+management, server failure detection and recovery, and the like. Nexus will run
+inside an Instance, and all Nexus state is stored in the control plane data
+storage system, so we can deploy as many instances as needed wherever we want to
+run them. See https://rfd.shared.oxide.computer/rfd/0061[RFD 61 Control Plane
+Architecture and Design].
+
+[[glos-Omicron]]Omicron::
+
+https://github.com/oxidecomputer/omicron/[Omicron] is an umbrella term for
+Oxide's control plane implementation. See
+https://rfd.shared.oxide.computer/rfd/0061[RFD 61 Control Plane Architecture and
+Design].
+
+[[glos-Pilot]]Pilot::
+
+https://github.com/oxidecomputer/pilot/[Pilot] is a sled command executation helper tool.
+
+[[glos-Progenitor]]Progenitor::
+
+https://github.com/oxidecomputer/progenitor[Progenitor] is a Rust crate created at Oxide
+for generating opinionated clients from API descriptions specified in the OpenAPI 3.0.x format.
+
+[[glos-Propolis]]Propolis::
+
+https://github.com/oxidecomputer/propolis[Propolis] is the userspace for
+illumos’s hypervisor: https://en.wikipedia.org/wiki/Bhyve[Bhyve].
++
+Propolis is responsible for creating a virtual machine abstraction on top of
+the underlying physical resources - it utilizes the <<glos-sled, sled>>’s physical CPUs, the
+distributed block storage abstraction, and an interface to the network switch to
+create this virtual abstraction. Propolis operates "transiently", acting on
+resources stored in the durable storage layers, rather than creating new
+resources on its own. We can see this pattern with both NICs and Disks, though
+it applies to other peripherals: metadata about these devices must be stored in
+the control plane database, meaning allocation of these objects will be managed
+by Nexus.+
++
+See more information in
+https://github.com/oxidecomputer/rfd/tree/0152/rfd/0152#24-propolis[RFD 152 Sled
+Agent and Propolis APIs].
+
+[[glos-PSC]]PSC::
+
+Power Shelf Controller, a small computer that monitors and possibly controls
+rectifiers and other logic in a power shelf. PSCs may be accessed externally
+via Ethernet, USB, CANBUS, or other communication protocols.
+
+
+[[glos-Pumpkind]]Pumpkind::
+
+https://github.com/oxidecomputer/pumpkind[Pumpkind] is a networking daemon to help root cause https://github.com/oxidecomputer/dendrite-archived/issues/846[ASIC goes into partial pumpkin mode].
+
+[[glos-Ruby]]Ruby::
+
+A development setup for <<glos-Cosmo, Cosmo>> work aimed at Host OS work.  See
+https://github.com/oxidecomputer/meta/blob/master/engineering/ruby-setup.adoc[Ruby Setup].
+
+[[glos-Scrimlet]]Scrimlet::
+
+A <<glos-Gimlet, Gimlet>> attached to a <<glos-Sidecar, Sidecar>> via a PCIe link.
+An Oxide Rack has two Scrimlets in <<glos-Cubby, cubbies>> 14 and 16.
+
+[[glos-Sharkfin]]Sharkfin::
+
+The storage midplane, or sharkfins, are a series of adapters that provide U.2
+connectors and interface with the broader PCIe and hotplug subsystems in Gimlet.
+
+[[glos-Sidecar]]Sidecar::
+
+https://github.com/oxidecomputer/hardware-sidecar[Sidecar] is Oxide's first generation rack level switch. There are two sidecars per <<glos-sled, sled>>. See https://rfd.shared.oxide.computer/rfd/0058[RFD 58 Rack Switch].
+
+[[glos-sled]]Sled::
+
+A pluggable server in an Oxide Rack. See
+https://github.com/oxidecomputer/rfd/tree/master/rfd/0014[RFD 14 The Oxide Rack
+v1.0].
+
+[[glos-sled-agent]]Sled Agent::
+
+A https://github.com/oxidecomputer/omicron/tree/main/omicron-sled-agent[sled
+agent] will run on each server (including those functioning as switches) to
+create, update, and destroy Instances, storage resources, and networking
+resources; inventory hardware and report faults and other notifications to
+Nexus; and manage software updates for all software on the server.
+
+[[glos-steno]]Steno::
+
+https://github.com/oxidecomputer/steno[Steno] is a WIP distributed sagas implementation used by the Oxide control plane.
+
+[[glos-switch-agent]]Switch Agent::
+
+A switch agent will run on each of the two servers functioning as switches for
+the rack in order to support configuration of the switches and manage software
+updates for switch-specific components on the system.
+
+[[glos-Toronto]]Toronto::
+
+Toronto is the name of Oxide’s second-generation rack switch built around the
+Xsight Labs X2 Programmable Switch ASIC.  See https://rfd.shared.oxide.computer/rfd/548[RFD 548 Toronto Rack Switch].
+
+[[glos-Wicket]]Wicket::
+
+The technician port interface: a captive management shell running on a <<glos-Scrimlet, Scrimlet>>, accessed by operators over SSH. See https://rfd.shared.oxide.computer/rfd/0323[RFD 323 Technician Port Interface].
+
+[glossary]
+== Industry Terms 
+
+[[glos-ACPI]]ACPI::
+
+Advanced Configuration and Power Interface. A specification that
+describes an extensible means for a platform to discover hardware
+components and make changes to the running system. Specifications
+available http://www.uefi.org/acpi/specs[online]. 
+
+[[glos-ACS]]ACS::
+
+ATA Command Set. The primary set of commands that are required for ATA
+devices.
+
+[[glos-AER]]AER::
+
+Advanced Error Reporting. An optional form of error reporting provided
+by PCI express devices that allows for more fine-grained error reporting
+and response.
+
+[[glos-AHCI]]AHCI::
+
+Advanced Host Controller Interface. A specification for a SATA HBA
+controller. An AHCI chipset is commonly found on most current x86
+platform controller hubs.
+
+[[glos-PSP]]AMD Platform Security Processor (PSP)::
+
+A trusted execution environment for AMD processors. See https://en.wikipedia.org/wiki/AMD_Platform_Security_Processor.
+
+[[glos-API]]API::
+
+Application programmer interface.
+
+[[glos-APIC]]APIC::
+
+Advanced Programmable Interrupt Controller. A class of interrupt
+controllers used on Intel x86 platforms. This is documented in Chapter
+10 Advanced Programmable Interrupt Controller (APIC) in Intel Volume 3
+sdm. See also, <<glos-xapic,x2apic>>.
+
+[[glos-ASIC]]ASIC::
+
+Application Specific Integrated Circuit. An integrated circuit, commonly
+thought of as a chip, that has been created for a specific purpose. For
+example, a CPU or GPU. While an ASIC may be able to run programs on top
+of it, the logic of the ASIC itself is fixed, unlike a CPLD or FPGA.
+
+[[glos-backplane]]Backplane::
+
+The backplane of a system is often a discrete <<glos-FRU, FRU>> that exists in
+the system that is used to connect all of the storage (whether <<glos-SATA,
+SATA>>, <<glos-SAS, SAS>>, <<glos-NVMe, NVMe>>) in the system to a set of ports
+on either the system board or distinct expansion cards. The backplane is wired
+to a number of 'bays'.  Each bay can house one device, though some bays can
+house multiple devices. The bays are usually built into the chassis. +
++
+Today, most backplanes come in two different forms. They are either considered
+passive devices or active devices. In the case of passive devices, they exist
+primarily to pass through the electrical wiring of storage devices. Active
+backplanes have components that actively participate and may modify the
+transmitted data. For example, this is performed by <<glos-SAS, SAS>> expanders
+and <<glos-PCIe, PCIe>> switches.
+
+
+[[glos-BIOS]]BIOS::
+
+Basic Input/Output System. The BIOS is a basic operating environment in
+IBM compatible PCs which still is used today. This environment provides
+an interface to the platform firmware and specifies basic components and
+programming environments. The BIOS has almost completely been replaced
+by UEFI.
+
+[[glos-BGP]]BGP::
+
+Border Gateway Protocol. A protocol that is used to exchange routing
+information on the Internet.
+
+[[glos-Blobs]]Blobs::
+
+Closed-source firmware binaries with little information about their contents. Sometimes known as *binary blobs*.
+
+[[glos-BMC]]BMC::
+
+Baseboard Management Controller. A component in the IPMI specification that is a
+separate processor that can be used to manage the system. BMC devices often use
+chips from manufacturers Aspeed and Nuvaton.
+
+[[glos-Cerberus]]Cerberus::
+
+https://github.com/opencomputeproject/Project_Olympus/blob/master/Project_Cerberus/Project%20Cerberus%20Architecture%20Overview.pdf[Cerberus] is Microsoft's <<glos-Hardware-RoT, hardware RoT>> implementation.
+
+[[glos-CPLD]]CPLD::
+
+Complex Programmable Logic Device. A device that has a series of logic
+gates that can be programmed and reprogrammed. Often used to implement a
+small chip that does not make sense to produce as an ASIC.
+
+[[glos-CPU]]CPU::
+
+Central Processing Unit.
+
+[[glos-DDR]]DDR::
+
+Double Data Rate. A data transfer technique used in DIMMs.
+
+[[glos-DHCP]]DHCP::
+
+Dynamic Host Configuration Protocol. A protocol used to assign devices
+on an IPv4 network a dynamic address, automatically. A variant exists
+for IPv6 systems.
+
+[[glos-DIMM]]DIMM::
+
+Dual in-line memory module. DIMMs are used to provide volatile memory to
+the system.
+
+[[glos-DMI]]DMI::
+
+Direct Media Interconnect. An Intel specific interconnect that is used
+to connect components between the PCH and CPU.
+
+[[glos-DMTF]]DMTF::
+
+Data center Management Task Force. A standards body responsible for
+specifications such as SMBIOS and Redfish.
+
+[[glos-DVT]]DVT::
+
+https://rfd.shared.oxide.computer/rfd/0092#_design_validation_test_dvt[Design
+Validation Test] is the third phase of hardware build (after <<glos-DVT, DVT>>),
+where electrical is finalized and thermal, mechanical, and
+design-for-manufacturing aspects are validated.
+
+[[glos-EEPROM]]EEPROM::
+
+Electrically Erasable Programmable Read-Only Memory. A class of
+non-volatile memory that exists on devices, but optionally allows for
+bytes to be rewritten by the system.
+
+[[glos-EMCAv2]]EMCAv2::
+
+Extended Machine Check Architecture v2. An extension to the x86 MCA
+architecture that allows for firmware to intercept, consume, and
+enhance, MCA events.
+
+[[glos-EVT]]EVT::
+
+https://rfd.shared.oxide.computer/rfd/0092#_engineering_validation_test_evt[Engineering
+Validation Test] is the second phase of hardware build, after prototype build.
+It is the first fabrication of a design that is feature complete. Initial
+validation should be done here, although significant redesign may be necessary.
+
+
+[[glos-Firmware]]Firmware::
+
+A general, somewhat nebulous term for software that’s usually closely associated
+with hardware and runs outside the scope of the operating system running on the
+main CPU. Individual hardware devices like NICs, HBAs, disk drives, etc.
+typically also include firmware that physically runs on a controller within the
+device. 
+
+[[glos-Firmware-Attestation]]Firmware Attestation::
+
+The system can prove cryptographically to a third party that firmware
+(potentially all firmware on the system) is exactly what’s expected. Facility
+provided by <<glos-Hardware-RoT, Hardware Root of Trust>>.
+
+[[glos-First-instruction-integrity]]First Instruction Integrity::
+
+All code executed on the host CPU matches what the operator intends (i.e.,
+system firmware hasn’t been replaced).  An implementation might rely on the root
+of trust verifying a signature associated with the firmware and preventing the
+system from booting if the signature cannot be verified. Facility provided by
+<<glos-Hardware-RoT, Hardware Root of Trust>>.
+
+[[glos-FPGA]]FPGA::
+
+Field Programmable Gate Array. A reprogrammable logic device that is
+often used as a makeshift chip. Uses a different form of programmable
+logic than CPLDs.
+
+[[glos-FRU]]FRU::
+
+Field Replaceable Unit. A distinct component of a physical system that
+can be replaced independently of other components by a technician in the
+field. Common examples are a hot-swappable power supply, a PCIe
+expansion card like a networking card, or a CPU.
+
+[[glos-GPU]]GPU::
+
+Graphical Processing Unit.
+
+[[glos-Hardware-RoT]]Hardware Root of Trust (RoT)::
+
+Device that provides facilities for ensuring the security of the system via
+controlled, trusted boot. Also called **silicon root of trust**.  See
+https://github.com/oxidecomputer/rfd/tree/0007/rfd/0007[RFD 7 Hardware Root of
+Trust Silicon]
+
+[[glos-HBA]]HBA::
+
+Host Bus Adapter. A device which is used to bridge two different
+environments and send commands to devices on that bus. The most common
+HBAs are disk controllers. For example, a SAS HBA provides a mean for
+systems software to send SAS commands to devices on the SAS fabric.
+
+[[glos-HDL]]HDL::
+
+Programming language used to create a hardware device design. Can be used to
+generate a bitstream for an <<glos-FPGA, FPGA>> or serve as the basis for an
+<<glos-ASIC, ASIC>>.
+
+[[glos-i2c]]i2c::
+
+Integer-Integrated Circuit. A bus format that is used for low-cost,
+simple, low-speed interconnects. i2c forms the basis for the SMBus
+system and various components in the chassis leverage an i2c style
+interface.
+
+[[glos-IEEE]]IEEE::
+
+Institute of Electrical and Electronics Engineers. A professional
+association. Maintains the Ethernet specifications.
+
+[[glos-IIO]]IIO::
+
+Integrated I/O. A unit on an Intel CPU that interfaces with I/O
+expansion units such as PCIe. The AMD equivalent is the
+<<glos-NBIO,NBIO>>.
+
+[[glos-IMC]]IMC::
+
+Integrated Memory Controller. Refers to the on-CPU memory controller
+used on Intel platforms. The AMD equivalent is the <<glos-UMC,UMC>>.
+
+[[glos-IME]]Intel Management Engine (IME)::
+
+Platform Firmware for Out of Band management on Intel machines. 
+See https://en.wikipedia.org/wiki/Intel_Management_Engine
++
+It is part of the <<glos-PCH,PCH>>.
+
+[[glos-IPMI]]IPMI::
+
+Intelligent Platform Management Interface. A specification that defines
+lights out management capabilities that may be delivered by a service
+processor or other firmware. Specifications available
+https://www.intel.com/content/www/us/en/servers/ipmi/ipmi-second-gen-interface-spec-v2-rev1-1.html[online].
+
+[[glos-JEDEC]]JEDEC::
+
+An international standards organization. Most commonly used in computing
+for the various DDR memory standards.
+
+[[glos-KCS]]KCS::
+
+Keyboard Controller Style. A type of interface that may be used by the
+operating system to issue and retrieve IPMI commands.
+
+[[glos-LLDP]]LLDP::
+
+Link Layer Discover Protocol. A protocol maintained by the IEEE for
+network device discovery.
+
+[[glos-MCA]]MCA::
+
+Machine Check Architecture. A part of the x86 architecture. It is the
+framework that is used to deliver notifications about classes of
+hardware errors to the operating system.
+
+[[glos-Motherboard]]Motherboard::
+
+Often shortened to mobo. An alternate and somewhat more common name for
+<<glos-System-Board,system board>>.
+
+[[glos-MSR]]MSR::
+
+Model Specific Register. A non-architectural register on the CPU whose
+actions vary based on CPU model.
+
+[[glos-NBIO]]NBIO::
+
+A unit on an AMD CPU that serves as a PCIe root port. The Intel
+equivalent is the <<glos-IIO,IIO>>.
+
+[[glos-NIC]]NIC::
+
+Network Interface Card. A peripheral card that provides networking
+capabilities, generally over Ethernet.
+
+[[glos-NMI]]NMI::
+
+Non-Maskable Interrupt. Refers to a class of interrupts that the
+processor and operating system cannot disable. Often used to signal a
+fatal error condition in the system. Operators can inject NMIs through
+IPMI.
+
+[[glos-NVMe]]NVMe::
+
+Non-Volatile Memory Express. A specification for interfacing with
+non-volatile memory devices. Generally, over PCIe. Specifications
+available http://nvmexpress.org/resources/specifications/[online].
+
+[[glos-OCP]]Open Compute Project (OCP)::
+
+An organization that publishes designs for various pieces of data center
+hardware.  It’s driven largely by Facebook and several other large companies.
+OCP designs may be a useful starting point for Oxide. 
+
+[[glos-OpenTitan]]OpenTitan::
+
+Open version of Google's <<glos-Hardware-RoT, Hardware RoT>>. Oxide is **not** using https://docs.opentitan.org/[OpenTitan], although it has been https://docs.google.com/document/d/1i5LpjLuaW7DHj3BW1PAiNOYLuAmjFJgvTauTcFSrMMg/edit#heading=h.qggy0arvsmw8[explored].
+
+[[glos-OSPF]]OSPF::
+
+Open Shortest Path First. A protocol for exchanging Internet routing
+information.
+
+[[glos-PCH]]PCH::
+
+Platform controller hub. A chip that exists on the system board that
+provides a number of common functions such as USB and Ethernet
+controllers.
+
+[[glos-PCI]]PCI::
+
+Peripheral Component Interface. Refers to a standard, both electrically
+and programatically for devices. It has been evolved into
+the PCI Express (PCIe) specification. From a software perspective, most
+expansion cards today interface with the system via PCI/PCIe.
+
+[[glos-PCIe]]PCIe::
+
+PCI Express. The current revision of the PCI bus. Where the PCI bus was
+previously a parallel bus, the PCIe bus is a serial bus. The PCIe bus is
+backwards compatible with PCI based devices from a software programming
+perspective. Almost all modern expansion cards are based on PCIe.
+
+[[glos-PDU]]PDU::
+
+Power Distribution Unit. A device that is used to provide power to
+several devices. It can be thought of as an intelligent power strip.
+
+[[glos-PMBus]]PMBus::
+
+Power Management bus. A specification that describes a command set for
+power related devices to both query and manage them.
+PMBus leverages SMBus as a transport layer.
+Specifications are available
+http://www.pmbus.org/Specifications/CurrentSpecifications[online].
+
+[[glos-PMTT]]PMTT::
+
+Platform Memory Topology Table. An ACPI table that describes memory
+information. See section 5.2.21.12 Memory Topology Table (PMTT) of ACPI
+v 6.2 [*] for more information.
+
+[[glos-PROM]]PROM::
+
+Programmable Read-Only Memory. A device that has readable non-volatile
+memory that can generally only be programmed once.
+
+[[glos-PSU]]PSU::
+
+Power Supply Unit. A device which accepts either AC or DC power and
+transforms it into various power lines that are required for the system
+board, drives, expansion cards, and other components in the platform.
+
+[[glos-PVT]]PVT::
+
+https://rfd.shared.oxide.computer/rfd/0092#_production_validation_test_pvt[Product
+Validation Test] is the final phase of hardware build, where the product is
+considered done and ready for shipping. It is the phase after <<glos-EVT, EVT>>.
+
+[[glos-QSFP]]QSFP::
+
+Quad small form factor pluggable transceiver. An iteration of the
+SFP/SFP+ specifications that combines four transceivers in one, allowing
+for increased data rates. These are commonly used for 40 Gb/s Ethernet.
+
+[[glos-QSFP28]]QSFP28::
+
+Quad small form factor pluggable 28 transceiver. An iteration of the
+SFP28 and QSFP specifications that combine four SFP28 transceivers,
+allowing for increased data rates. These are commonly used for 100 Gb/s
+Ethernet.
+
+[[glos-RAS]]RAS::
+
+Reliability, Availability, and Serviceability. Reliability refers to the
+ability to detect errors. Availability is the ability to still operate
+in the face of failure. Serviceability refers to capabilities that reduce
+the effort required to service a component.
+
+[[glos-RCA]]RCA::
+
+Root Cause Analysis. Usually refers to the act of determining the
+underlying cause behind the specific failure of a component in the
+system.
+
+[[glos-Redfish]]Redfish::
+
+An API standard developed by the DMTF that focuses around systems
+management. Specifications available
+https://www.dmtf.org/standards/redfish[online].
+
+[[glos-RunBMC]]RunBMC::
+
+A standard hardware interface for BMC devices. See the https://www.opencompute.org/documents/ocp-runbmc-daughterboard-card-design-specification-v1-4-1-pdf#page=1&zoom=auto,-33,792[spec], https://blogs.dropbox.com/tech/2019/08/runbmc-ocp-hardware-spec-solves-data-center-bmc-pain-points[blog post], https://www.youtube.com/watch?v=9BgQ3GzDzSM[2019 OCP Summit talk], and slides from the https://www.opencompute.org/files/RunBMC-OCP.pdf[2018 OCP Summit talk].
+
+[[glos-SAS]]SAS::
+
+Serial Attached SCSI. SAS devices are a drive interface that has been
+used by modern hard drives and solid state drives. It is an evolution of
+the SCSI command set; however, the physical interfaces have changed
+substantially from the original SCSI implementations.
+
+[[glos-SATA]]SATA::
+
+Serial ATA. A specification used by both hard drives and solid state
+drives. It derives its command set from the old ATA specifications.
+However, the modern physical layer and the way that commands are
+transferred has changed substantially.
+
+[[glos-SCSI]]SCSI::
+
+Originally a type of hard drive interface and command set. These days
+the command set has survived, but the physical layer has changed to SAS.
+
+[[glos-SDR]]SDR::
+
+Sensor Data Record. Information about a sensor that is provided by IPMI
+based systems.
+
+[[glos-SFF]]SFF::
+
+Small Form Factor. The SFF is a set of specifications that are provided
+by the Small Form Factor Committee. They create various standards that
+cover mechanical, electrical, and informational.
+
+[[glos-SFP]]SFP::
+
+Small Form Factor Pluggable transceiver. A specification for a
+pluggable transceiver used in networking devices.
+
+[[glos-SFP-Plus]]SFP+::
+
+Enhanced Small Form Factor Pluggable transceiver. A specification for an
+enhanced transceiver that can accommodate speeds used by 10 Gb/s
+Ethernet.
+
+[[glos-SFP28]]SFP28::
+
+Small From Factor Pluggable 28 transceiver. A revision of SFP+ devices
+that support both 10 Gb/s and 25 Gb/s Ethernet.
+
+[[glos-SPC]]SPC::
+
+SCSI Primary Commands. The set of standards commands that all SCSI
+devices must implement.
+
+[[glos-SES]]SES::
+
+SCSI Enclosure Services. A series of specifications that describe a
+means to get information about a storage enclosure that is available as
+a SCSI target.
+
+[[glos-SMBIOS]]SMBIOS::
+
+The System Management BIOS specification. A DMTF standard that defines
+read-only data structures about the system. Specifications available
+http://www.dmtf.org/standards/smbios[online].
+
+[[glos-SMBus]]SMBus::
+
+System Management Bus. A standard that describes how peripherals are
+interconnected on a shared bus and how devices are discovered. It is
+derived from i2c. This interface is generally used as part of the low
+level interconnects between the system and devices. Specifications are
+available http://www.smbus.org/specs/[online].
+
+[[glos-SMM]]SMM::
+
+System Management Mode. A mode of execution for x86 CPUs that is more
+privileged than that of the operating system. SMM is often used for
+various power management, error handling, and other platform-specific
+issues.
+
+[[glos-SP]]SP::
+
+Service Processor. A device that provides platform management
+capabilities even when the system is powered off or unavailable. Often a
+component of lights out management. See also, <<glos-IPMI,IPMI>>.
+
+[[glos-SPD]]SPD::
+
+Serial Presence Detect. Refers to a standardized method of accessing
+information on DIMMs such as their EEPROMs. This information is
+available over SMBus.
+
+[[glos-System-Board]]System Board::
+
+The primary electrical board that contains soldered on chips, physical
+slots for CPUs, DIMMs, PCIe devices, and more, and wiring to
+interconnect all of the components. Often called the motherboard.
+
+[[glos-tape-out]]Tape-out:: 
+
+The point where an integrated circute or printed circuit board is finalized for
+manufacturing. See https://en.wikipedia.org/wiki/Tape-out 
+
+[[glos-TPM]]Trusted Platform Module (TPM)::
+
+https://en.wikipedia.org/wiki/Trusted_Platform_Module[A TPM] is a device that
+provides security facilities that may overlap with a <<glos-Hardware-RoT, RoT>>.
+The term has also come to refer to a specific standard set of interfaces for
+such a device.
+
+[[glos-UEFI]]UEFI::
+
+Unified Extensible Firmware Interface. A series of specifications for
+systems firmware that are used to boot systems. A replacement for the
+BIOS. Also provides runtime services to the operation system, allowing
+for additional management capabilities.
+
+[[glos-UFM]]UFM::
+
+Upgradable Firmware Module. A class of firmware that can be upgradable
+in the field.
+
+[[glos-UMC]]UMC::
+
+Unified Memory Controller. Refers to the on-CPU memory controller used
+on AMD platforms. The Intel equivalent is the <<glos-IMC,IMC>>.
+
+[[glos-UUID]]UUID::
+
+Universally Unique Identifier. An ID that should be globally unique.
+
+[[glos-VPD]]VPD::
+
+Vital Product Data. Refers to information available on a device such as
+the part and serial numbers. Usually this information is available in
+EEPROMs burned into the devices.
+
+[[glos-WWN]]WWN::
+
+World Wide Name. A unique identifier that is assigned to a device.
+Commonly used in SAS devices both for identification and addressing.
+
+[[glos-x86]]x86::
+
+The Intel computing architecture used by both Intel and AMD.
+
+[[glos-xapic]]xapic and x2apic::
+
+Extended advanced programmable interrupt controller and its second
+revision. These are interrupt controllers used on x86 systems that have
+a standardized programming interface and capabilities. This is
+documented in Chapter 10 Advanced Programmable Interrupt Controller
+(APIC) in Intel Volume 3 sdm.

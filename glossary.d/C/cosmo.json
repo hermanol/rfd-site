@@ -1,0 +1,18 @@
+{
+  "term": "Cosmo",
+  "definition": "Cosmo is the name of Oxide's second generation server sled. It is responsible for running all of our customer workloads and the control plane itself. See RFD 0393 SP5 Sled - Cosmo. Cosmo uses a AMD Zen 5 Turin CPU.",
+  "mentions": [
+    {
+      "number": 393,
+      "text": "RFD 0393 SP5 Sled - Cosmo"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/hardware-cosmo",
+      "text": "Cosmo"
+    }
+  ],
+  "public": true
+}

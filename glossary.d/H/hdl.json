@@ -1,0 +1,8 @@
+{
+  "term": "HDL",
+  "definition": "Programming language used to create a hardware device design. Can be used to generate a bitstream for an FPGA or serve as the basis for an ASIC.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

@@ -1,0 +1,13 @@
+{
+  "term": "Intel Management Engine (IME)",
+  "definition": "Platform Firmware for Out of Band management on Intel machines. See https://en.wikipedia.org/wiki/Intel_Management_Engine It is part of the PCH.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Intel_Management_Engine",
+      "text": "https://en.wikipedia.org/wiki/Intel_Management_Engine"
+    }
+  ],
+  "public": true
+}

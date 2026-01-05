@@ -1,0 +1,8 @@
+{
+  "term": "MGS",
+  "definition": "The management gateway service (MGS) is the gateway between the control plane and/or wicketd to SPs on the management network. It runs a Dropshot server on the bootstrap network where it translates commands into messages that it sends on the management network (i.e. to SPs).",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

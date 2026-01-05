@@ -1,0 +1,8 @@
+{
+  "term": "IIO",
+  "definition": "Integrated I/O. A unit on an Intel CPU that interfaces with I/O expansion units such as PCIe. The AMD equivalent is the NBIO.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

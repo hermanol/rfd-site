@@ -1,0 +1,18 @@
+{
+  "term": "Helios",
+  "definition": "Helios is Oxide's host operating system based on Illumos.",
+  "mentions": [
+    {
+      "number": 26,
+      "text": "Host Operating System & Hypervisor"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/helios",
+      "text": "Github"
+    }
+  ],
+  "public": true
+}

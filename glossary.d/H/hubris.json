@@ -1,0 +1,18 @@
+{
+  "term": "Hubris",
+  "definition": "Hubris is Oxide's microcontroller operating system. See RFD 41 Custom microcontroller OS design.",
+  "mentions": [
+    {
+      "number": 41,
+      "text": "RFD 41 Custom microcontroller OS design"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/hubris",
+      "text": "Hubris"
+    }
+  ],
+  "public": true
+}

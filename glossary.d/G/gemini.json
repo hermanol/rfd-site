@@ -1,0 +1,26 @@
+{
+  "term": "Gemini",
+  "definition": "Gemini is the Oxide term for the RoT SP. See RFD 7 Hardware Root of Trust Silicon and RFD 8 Service Processor (SP).",
+  "mentions": [
+    {
+      "number": 7,
+      "text": "Hardware Root of Trust  Silicon] and https"
+    },
+    {
+      "number": 8,
+      "text": "Service\nProcessor (SP)]"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/rfd/tree/master/rfd/0007",
+      "text": "RFD 7 Hardware Root of Trust Silicon"
+    },
+    {
+      "url": "https://github.com/oxidecomputer/rfd/tree/0008/rfd/0008",
+      "text": "RFD 8 Service Processor (SP)"
+    }
+  ],
+  "public": true
+}

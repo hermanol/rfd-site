@@ -1,0 +1,8 @@
+{
+  "term": "SCSI",
+  "definition": "Originally a type of hard drive interface and command set. These days the command set has survived, but the physical layer has changed to SAS.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

@@ -1,0 +1,8 @@
+{
+  "term": "SDR",
+  "definition": "Sensor Data Record. Information about a sensor that is provided by IPMI based systems.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

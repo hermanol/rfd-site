@@ -1,0 +1,13 @@
+{
+  "term": "Progenitor",
+  "definition": "Progenitor is a Rust crate created at Oxide for generating opinionated clients from API descriptions specified in the OpenAPI 3.0.x format.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/progenitor",
+      "text": "Progenitor"
+    }
+  ],
+  "public": true
+}

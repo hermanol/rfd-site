@@ -1,0 +1,8 @@
+{
+  "term": "PVT",
+  "definition": "Product Validation Test is the final phase of hardware build, where the product is considered done and ready for shipping. It is the phase after EVT.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

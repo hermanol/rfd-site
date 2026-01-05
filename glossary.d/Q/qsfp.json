@@ -1,0 +1,8 @@
+{
+  "term": "QSFP",
+  "definition": "Quad small form factor pluggable transceiver. An iteration of the SFP/SFP+ specifications that combines four transceivers in one, allowing for increased data rates. These are commonly used for 40 Gb/s Ethernet.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

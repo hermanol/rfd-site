@@ -1,0 +1,13 @@
+{
+  "term": "SMBIOS",
+  "definition": "The System Management BIOS specification. A DMTF standard that defines read-only data structures about the system. Specifications available online.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "http://www.dmtf.org/standards/smbios",
+      "text": "online"
+    }
+  ],
+  "public": true
+}

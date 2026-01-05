@@ -1,0 +1,13 @@
+{
+  "term": "Dendrite",
+  "definition": "Dendrite contains all software needed to manage the Oxide switch, Sidecar.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/dendrite",
+      "text": "Dendrite"
+    }
+  ],
+  "public": true
+}

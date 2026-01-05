@@ -1,0 +1,8 @@
+{
+  "term": "PMTT",
+  "definition": "Platform Memory Topology Table. An ACPI table that describes memory information. See section 5.2.21.12 Memory Topology Table (PMTT) of ACPI v 6.2 [*] for more information.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

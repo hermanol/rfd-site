@@ -1,0 +1,2 @@
+- The design of any new pages should make use of existing design elements only, such as typescript components, modals, types, etc.
+- Be the same token, we want to avoid modifying existing schema wherever possible, and if it is found to be necessary, you should flag it to us first before committing any changes.

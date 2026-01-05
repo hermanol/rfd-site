@@ -1,0 +1,8 @@
+{
+  "term": "FRU",
+  "definition": "Field Replaceable Unit. A distinct component of a physical system that can be replaced independently of other components by a technician in the field. Common examples are a hot-swappable power supply, a PCIe expansion card like a networking card, or a CPU.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

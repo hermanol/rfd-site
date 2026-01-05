@@ -1,0 +1,13 @@
+{
+  "term": "Cerberus",
+  "definition": "Cerberus is Microsoft's hardware RoT implementation.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/opencomputeproject/Project_Olympus/blob/master/Project_Cerberus/Project%20Cerberus%20Architecture%20Overview.pdf",
+      "text": "Cerberus"
+    }
+  ],
+  "public": true
+}

@@ -1,0 +1,13 @@
+{
+  "term": "Gimlet",
+  "definition": "Gimlet is the name of Oxide's first generation server sled. It is responsible for running all of our customer workloads and the control plane itself. Gimlet uses a AMD Zen 3 Milan CPU.",
+  "mentions": [
+    {
+      "number": 46,
+      "text": "RFD 46 Server Sled 'Gimlet'"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

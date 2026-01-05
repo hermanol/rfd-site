@@ -1,0 +1,17 @@
+{
+  "term": "OpenTitan",
+  "definition": "Open version of Google's Hardware RoT. Oxide is not using OpenTitan, although it has been explored.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://docs.opentitan.org/",
+      "text": "OpenTitan"
+    },
+    {
+      "url": "https://docs.google.com/document/d/1i5LpjLuaW7DHj3BW1PAiNOYLuAmjFJgvTauTcFSrMMg/edit#heading=h.qggy0arvsmw8",
+      "text": "explored"
+    }
+  ],
+  "public": true
+}

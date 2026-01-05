@@ -1,0 +1,8 @@
+{
+  "term": "SP",
+  "definition": "Service Processor. A device that provides platform management capabilities even when the system is powered off or unavailable. Often a component of lights out management. See also, IPMI.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

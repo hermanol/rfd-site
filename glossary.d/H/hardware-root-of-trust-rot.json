@@ -1,0 +1,18 @@
+{
+  "term": "Hardware Root of Trust (RoT)",
+  "definition": "Device that provides facilities for ensuring the security of the system via controlled, trusted boot. Also called silicon root of trust. See RFD 7 Hardware Root of Trust Silicon.",
+  "mentions": [
+    {
+      "number": 7,
+      "text": "Hardware Root of\nTrust Silicon]"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/rfd/tree/0007/rfd/0007",
+      "text": "RFD 7 Hardware Root of Trust Silicon"
+    }
+  ],
+  "public": true
+}

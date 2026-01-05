@@ -1,0 +1,8 @@
+{
+  "term": "EVT",
+  "definition": "Engineering Validation Test is the second phase of hardware build, after prototype build. It is the first fabrication of a design that is feature complete. Initial validation should be done here, although significant redesign may be necessary.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

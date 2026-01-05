@@ -1,0 +1,8 @@
+{
+  "term": "Cubby",
+  "definition": "Cubby may refer to one of two things.\n\n* The physical electro-mechanical part (FRU) in the system. It is 2 OU high and takes up the full width of the rack and is the receptacle upon which two sleds are inserted. An Oxide Rack contains 16 of these parts.\n\n* Each of the two receptacles on each physical cubby. An Oxide Rack contains 32 of these receptacles. \"Sled 30\" and \"Cubby 30\" may both be used to refer to the top left Sled.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

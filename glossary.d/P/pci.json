@@ -1,0 +1,8 @@
+{
+  "term": "PCI",
+  "definition": "Peripheral Component Interface. Refers to a standard, both electrically and programatically for devices. It has been evolved into the PCI Express (PCIe) specification. From a software perspective, most expansion cards today interface with the system via PCI/PCIe.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

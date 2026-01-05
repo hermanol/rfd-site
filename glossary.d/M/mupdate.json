@@ -1,0 +1,13 @@
+{
+  "term": "MUPdate",
+  "definition": "The Minimum Upgradable Product Updater. See RFD 326 The Minimum Upgradable Product (MUP).",
+  "mentions": [
+    {
+      "number": 326,
+      "text": "RFD 326 The Minimum Upgradable Product (MUP)"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

@@ -1,0 +1,8 @@
+{
+  "term": "IMC",
+  "definition": "Integrated Memory Controller. Refers to the on-CPU memory controller used on Intel platforms. The AMD equivalent is the UMC.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

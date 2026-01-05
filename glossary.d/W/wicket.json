@@ -1,0 +1,13 @@
+{
+  "term": "Wicket",
+  "definition": "The technician port interface: a captive management shell running on a Scrimlet, accessed by operators over SSH. See RFD 323 Technician Port Interface.",
+  "mentions": [
+    {
+      "number": 323,
+      "text": "RFD 323 Technician Port Interface"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

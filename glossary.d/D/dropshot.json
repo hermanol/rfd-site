@@ -1,0 +1,13 @@
+{
+  "term": "Dropshot",
+  "definition": "Dropshot is Oxide's web framework in Rust.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/dropshot",
+      "text": "Dropshot"
+    }
+  ],
+  "public": true
+}

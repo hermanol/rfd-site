@@ -1,0 +1,8 @@
+{
+  "term": "PCH",
+  "definition": "Platform controller hub. A chip that exists on the system board that provides a number of common functions such as USB and Ethernet controllers.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

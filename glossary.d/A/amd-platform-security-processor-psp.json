@@ -1,0 +1,13 @@
+{
+  "term": "AMD Platform Security Processor (PSP)",
+  "definition": "A trusted execution environment for AMD processors. See https://en.wikipedia.org/wiki/AMD_Platform_Security_Processor.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://en.wikipedia.org/wiki/AMD_Platform_Security_Processor.",
+      "text": "https://en.wikipedia.org/wiki/AMD_Platform_Security_Processor."
+    }
+  ],
+  "public": true
+}

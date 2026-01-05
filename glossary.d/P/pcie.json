@@ -1,0 +1,8 @@
+{
+  "term": "PCIe",
+  "definition": "PCI Express. The current revision of the PCI bus. Where the PCI bus was previously a parallel bus, the PCIe bus is a serial bus. The PCIe bus is backwards compatible with PCI based devices from a software programming perspective. Almost all modern expansion cards are based on PCIe.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

@@ -1,0 +1,13 @@
+{
+  "term": "Trusted Platform Module (TPM)",
+  "definition": "A TPM is a device that provides security facilities that may overlap with a RoT. The term has also come to refer to a specific standard set of interfaces for such a device.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Trusted_Platform_Module",
+      "text": "A TPM"
+    }
+  ],
+  "public": true
+}

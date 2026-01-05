@@ -1,0 +1,13 @@
+{
+  "term": "Steno",
+  "definition": "Steno is a WIP distributed sagas implementation used by the Oxide control plane.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/steno",
+      "text": "Steno"
+    }
+  ],
+  "public": true
+}

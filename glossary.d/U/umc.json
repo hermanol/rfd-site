@@ -1,0 +1,8 @@
+{
+  "term": "UMC",
+  "definition": "Unified Memory Controller. Refers to the on-CPU memory controller used on AMD platforms. The Intel equivalent is the IMC.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

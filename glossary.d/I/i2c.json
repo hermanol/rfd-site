@@ -1,0 +1,8 @@
+{
+  "term": "i2c",
+  "definition": "Integer-Integrated Circuit. A bus format that is used for low-cost, simple, low-speed interconnects. i2c forms the basis for the SMBus system and various components in the chassis leverage an i2c style interface.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

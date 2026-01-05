@@ -1,0 +1,8 @@
+{
+  "term": "SMM",
+  "definition": "System Management Mode. A mode of execution for x86 CPUs that is more privileged than that of the operating system. SMM is often used for various power management, error handling, and other platform-specific issues.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

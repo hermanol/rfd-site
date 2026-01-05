@@ -1,0 +1,8 @@
+{
+  "term": "SPC",
+  "definition": "SCSI Primary Commands. The set of standards commands that all SCSI devices must implement.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

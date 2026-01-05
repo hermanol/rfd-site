@@ -1,0 +1,13 @@
+{
+  "term": "Bootstrap Agent",
+  "definition": "A bootstrap agent will run on each server (including those functioning as switches) to establish rack-level trust, unlock storage, launch the sled agent, and configure new devices.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/omicron/tree/main/omicron-bootstrap-agent",
+      "text": "bootstrap agent"
+    }
+  ],
+  "public": true
+}

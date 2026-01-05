@@ -1,0 +1,8 @@
+{
+  "term": "Scrimlet",
+  "definition": "A Gimlet attached to a Sidecar via a PCIe link. An Oxide Rack has two Scrimlets in cubbies 14 and 16.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

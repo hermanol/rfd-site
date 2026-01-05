@@ -1,0 +1,8 @@
+{
+  "term": "VPD",
+  "definition": "Vital Product Data. Refers to information available on a device such as the part and serial numbers. Usually this information is available in EEPROMs burned into the devices.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

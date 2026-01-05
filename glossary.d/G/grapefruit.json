@@ -1,0 +1,13 @@
+{
+  "term": "Grapefruit",
+  "definition": "A development board for work with Cosmo. See RFD 461 Grapefruit Dev Board.",
+  "mentions": [
+    {
+      "number": 461,
+      "text": "RFD 461 Grapefruit Dev Board"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

@@ -1,0 +1,13 @@
+{
+  "term": "Redfish",
+  "definition": "An API standard developed by the DMTF that focuses around systems management. Specifications available online.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://www.dmtf.org/standards/redfish",
+      "text": "online"
+    }
+  ],
+  "public": true
+}

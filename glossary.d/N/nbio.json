@@ -1,0 +1,8 @@
+{
+  "term": "NBIO",
+  "definition": "A unit on an AMD CPU that serves as a PCIe root port. The Intel equivalent is the IIO.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

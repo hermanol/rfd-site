@@ -1,0 +1,8 @@
+{
+  "term": "APIC",
+  "definition": "Advanced Programmable Interrupt Controller. A class of interrupt controllers used on Intel x86 platforms. This is documented in Chapter 10 Advanced Programmable Interrupt Controller (APIC) in Intel Volume 3 sdm. See also, x2apic.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

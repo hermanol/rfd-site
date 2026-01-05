@@ -1,0 +1,18 @@
+{
+  "term": "Nexus",
+  "definition": "Nexus is a monolithic program, living in the Omicron repo and serving primary control plane functionality. Nexus hosts all user-facing APIs (both operator and customer) and also provides APIs internal to the rack for other components to report faults, generate alerts, and so on. Nexus is also responsible for background control plane activity, including utilization management, server failure detection and recovery, and the like. Nexus will run inside an Instance, and all Nexus state is stored in the control plane data storage system, so we can deploy as many instances as needed wherever we want to run them. See RFD 61 Control Plane Architecture and Design.",
+  "mentions": [
+    {
+      "number": 61,
+      "text": "RFD 61 Control Plane\nArchitecture and Design"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/omicron/tree/main/omicron-nexus",
+      "text": "Nexus"
+    }
+  ],
+  "public": true
+}

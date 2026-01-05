@@ -1,0 +1,8 @@
+{
+  "term": "Sharkfin",
+  "definition": "The storage midplane, or sharkfins, are a series of adapters that provide U.2 connectors and interface with the broader PCIe and hotplug subsystems in Gimlet.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

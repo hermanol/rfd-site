@@ -1,0 +1,13 @@
+{
+  "term": "IPMI",
+  "definition": "Intelligent Platform Management Interface. A specification that defines lights out management capabilities that may be delivered by a service processor or other firmware. Specifications available online.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://www.intel.com/content/www/us/en/servers/ipmi/ipmi-second-gen-interface-spec-v2-rev1-1.html",
+      "text": "online"
+    }
+  ],
+  "public": true
+}

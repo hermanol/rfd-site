@@ -1,0 +1,8 @@
+{
+  "term": "NMI",
+  "definition": "Non-Maskable Interrupt. Refers to a class of interrupts that the processor and operating system cannot disable. Often used to signal a fatal error condition in the system. Operators can inject NMIs through IPMI.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

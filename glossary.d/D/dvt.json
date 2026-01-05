@@ -1,0 +1,8 @@
+{
+  "term": "DVT",
+  "definition": "Design Validation Test is the third phase of hardware build (after DVT), where electrical is finalized and thermal, mechanical, and design-for-manufacturing aspects are validated.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

@@ -1,0 +1,13 @@
+{
+  "term": "Pilot",
+  "definition": "Pilot is a sled command executation helper tool.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/pilot/",
+      "text": "Pilot"
+    }
+  ],
+  "public": true
+}

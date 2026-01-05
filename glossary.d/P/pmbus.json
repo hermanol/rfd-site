@@ -1,0 +1,13 @@
+{
+  "term": "PMBus",
+  "definition": "Power Management bus. A specification that describes a command set for power related devices to both query and manage them. PMBus leverages SMBus as a transport layer. Specifications are available online.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "http://www.pmbus.org/Specifications/CurrentSpecifications",
+      "text": "online"
+    }
+  ],
+  "public": true
+}

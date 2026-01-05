@@ -1,0 +1,8 @@
+{
+  "term": "ASIC",
+  "definition": "Application Specific Integrated Circuit. An integrated circuit, commonly thought of as a chip, that has been created for a specific purpose. For example, a CPU or GPU. While an ASIC may be able to run programs on top of it, the logic of the ASIC itself is fixed, unlike a CPLD or FPGA.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

@@ -1,0 +1,8 @@
+{
+  "term": "Firmware",
+  "definition": "A general, somewhat nebulous term for software that’s usually closely associated with hardware and runs outside the scope of the operating system running on the main CPU. Individual hardware devices like NICs, HBAs, disk drives, etc. typically also include firmware that physically runs on a controller within the device.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

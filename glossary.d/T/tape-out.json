@@ -1,0 +1,13 @@
+{
+  "term": "Tape-out",
+  "definition": "The point where an integrated circute or printed circuit board is finalized for manufacturing. See https://en.wikipedia.org/wiki/Tape-out.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Tape-out",
+      "text": "https://en.wikipedia.org/wiki/Tape-out"
+    }
+  ],
+  "public": true
+}

@@ -1,0 +1,8 @@
+{
+  "term": "PSC",
+  "definition": "Power Shelf Controller, a small computer that monitors and possibly controls rectifiers and other logic in a power shelf. PSCs may be accessed externally via Ethernet, USB, CANBUS, or other communication protocols.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

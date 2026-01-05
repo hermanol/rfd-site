@@ -1,0 +1,8 @@
+{
+  "term": "MCA",
+  "definition": "Machine Check Architecture. A part of the x86 architecture. It is the framework that is used to deliver notifications about classes of hardware errors to the operating system.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

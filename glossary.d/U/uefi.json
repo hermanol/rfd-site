@@ -1,0 +1,8 @@
+{
+  "term": "UEFI",
+  "definition": "Unified Extensible Firmware Interface. A series of specifications for systems firmware that are used to boot systems. A replacement for the BIOS. Also provides runtime services to the operation system, allowing for additional management capabilities.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

@@ -1,0 +1,13 @@
+{
+  "term": "ACPI",
+  "definition": "Advanced Configuration and Power Interface. A specification that describes an extensible means for a platform to discover hardware components and make changes to the running system. Specifications available online.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "http://www.uefi.org/acpi/specs",
+      "text": "uefi.org"
+    }
+  ],
+  "public": true
+}

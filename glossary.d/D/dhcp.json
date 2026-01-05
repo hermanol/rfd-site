@@ -1,0 +1,8 @@
+{
+  "term": "DHCP",
+  "definition": "Dynamic Host Configuration Protocol. A protocol used to assign devices on an IPv4 network a dynamic address, automatically. A variant exists for IPv6 systems.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

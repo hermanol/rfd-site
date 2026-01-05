@@ -1,0 +1,8 @@
+{
+  "term": "BIOS",
+  "definition": "Basic Input/Output System. The BIOS is a basic operating environment in IBM compatible PCs which still is used today. This environment provides an interface to the platform firmware and specifies basic components and programming environments. The BIOS has almost completely been replaced by UEFI.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

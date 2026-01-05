@@ -1,0 +1,8 @@
+{
+  "term": "System Board",
+  "definition": "The primary electrical board that contains soldered on chips, physical slots for CPUs, DIMMs, PCIe devices, and more, and wiring to interconnect all of the components. Often called the motherboard.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

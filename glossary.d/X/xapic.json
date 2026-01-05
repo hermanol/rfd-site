@@ -1,0 +1,8 @@
+{
+  "term": "xapic and x2apic",
+  "definition": "Extended advanced programmable interrupt controller and its second revision. These are interrupt controllers used on x86 systems that have a standardized programming interface and capabilities. This is documented in Chapter 10 Advanced Programmable Interrupt Controller (APIC) in Intel Volume 3 sdm.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

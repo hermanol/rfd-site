@@ -1,0 +1,8 @@
+{
+  "term": "LLDP",
+  "definition": "Link Layer Discover Protocol. A protocol maintained by the IEEE for network device discovery.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

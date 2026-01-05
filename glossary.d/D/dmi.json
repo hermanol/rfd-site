@@ -1,0 +1,8 @@
+{
+  "term": "DMI",
+  "definition": "Direct Media Interconnect. An Intel specific interconnect that is used to connect components between the PCH and CPU.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

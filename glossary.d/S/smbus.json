@@ -1,0 +1,13 @@
+{
+  "term": "SMBus",
+  "definition": "System Management Bus. A standard that describes how peripherals are interconnected on a shared bus and how devices are discovered. It is derived from i2c. This interface is generally used as part of the low level interconnects between the system and devices. Specifications are available online.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "http://www.smbus.org/specs/",
+      "text": "online"
+    }
+  ],
+  "public": true
+}

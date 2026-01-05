@@ -1,0 +1,8 @@
+{
+  "term": "BMC",
+  "definition": "Baseboard Management Controller. A component in the IPMI specification that is a separate processor that can be used to manage the system. BMC devices often use chips from manufacturers Aspeed and Nuvaton.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

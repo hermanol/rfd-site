@@ -1,0 +1,8 @@
+{
+  "term": "Firmware Attestation",
+  "definition": "The system can prove cryptographically to a third party that firmware (potentially all firmware on the system) is exactly what’s expected. Facility provided by Hardware Root of Trust.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

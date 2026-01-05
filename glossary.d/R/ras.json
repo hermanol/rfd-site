@@ -1,0 +1,8 @@
+{
+  "term": "RAS",
+  "definition": "Reliability, Availability, and Serviceability. Reliability refers to the ability to detect errors. Availability is the ability to still operate in the face of failure. Serviceability refers to capabilities that reduce the effort required to service a component.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

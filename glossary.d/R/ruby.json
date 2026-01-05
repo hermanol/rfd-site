@@ -1,0 +1,13 @@
+{
+  "term": "Ruby",
+  "definition": "A development setup for Cosmo work aimed at Host OS work. See Ruby Setup.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/meta/blob/master/engineering/ruby-setup.adoc",
+      "text": "Ruby Setup"
+    }
+  ],
+  "public": true
+}

@@ -1,0 +1,25 @@
+{
+  "term": "RunBMC",
+  "definition": "A standard hardware interface for BMC devices. See the spec, blog post, 2019 OCP Summit talk, and slides from the 2018 OCP Summit talk.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://www.opencompute.org/documents/ocp-runbmc-daughterboard-card-design-specification-v1-4-1-pdf#page=1&zoom=auto,-33,792",
+      "text": "spec"
+    },
+    {
+      "url": "https://blogs.dropbox.com/tech/2019/08/runbmc-ocp-hardware-spec-solves-data-center-bmc-pain-points",
+      "text": "blog post"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9BgQ3GzDzSM",
+      "text": "2019 OCP Summit talk"
+    },
+    {
+      "url": "https://www.opencompute.org/files/RunBMC-OCP.pdf",
+      "text": "2018 OCP Summit talk"
+    }
+  ],
+  "public": true
+}

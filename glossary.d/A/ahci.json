@@ -1,0 +1,8 @@
+{
+  "term": "AHCI",
+  "definition": "Advanced Host Controller Interface. A specification for a SATA HBA controller. An AHCI chipset is commonly found on most current x86 platform controller hubs.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

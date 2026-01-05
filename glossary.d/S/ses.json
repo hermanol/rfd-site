@@ -1,0 +1,8 @@
+{
+  "term": "SES",
+  "definition": "SCSI Enclosure Services. A series of specifications that describe a means to get information about a storage enclosure that is available as a SCSI target.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

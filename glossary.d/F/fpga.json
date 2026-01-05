@@ -1,0 +1,8 @@
+{
+  "term": "FPGA",
+  "definition": "Field Programmable Gate Array. A reprogrammable logic device that is often used as a makeshift chip. Uses a different form of programmable logic than CPLDs.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

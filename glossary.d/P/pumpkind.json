@@ -1,0 +1,17 @@
+{
+  "term": "Pumpkind",
+  "definition": "Pumpkind is a networking daemon to help root cause ASIC goes into partial pumpkin mode.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/pumpkind",
+      "text": "Pumpkind"
+    },
+    {
+      "url": "https://github.com/oxidecomputer/dendrite-archived/issues/846",
+      "text": "ASIC goes into partial pumpkin mode"
+    }
+  ],
+  "public": true
+}

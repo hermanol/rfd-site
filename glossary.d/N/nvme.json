@@ -1,0 +1,13 @@
+{
+  "term": "NVMe",
+  "definition": "Non-Volatile Memory Express. A specification for interfacing with non-volatile memory devices. Generally, over PCIe. Specifications available online.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "http://nvmexpress.org/resources/specifications/",
+      "text": "online"
+    }
+  ],
+  "public": true
+}

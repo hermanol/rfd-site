@@ -1,0 +1,8 @@
+{
+  "term": "CPLD",
+  "definition": "Complex Programmable Logic Device. A device that has a series of logic gates that can be programmed and reprogrammed. Often used to implement a small chip that does not make sense to produce as an ASIC.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

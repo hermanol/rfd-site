@@ -1,0 +1,13 @@
+{
+  "term": "Humility",
+  "definition": "Humility is the debugger for Hubris.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/humility",
+      "text": "Humility"
+    }
+  ],
+  "public": true
+}

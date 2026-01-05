@@ -1,0 +1,13 @@
+{
+  "term": "Blueprints",
+  "definition": "Blueprints are very detailed descriptions of the intended state of the system. See RFD 373 Reliable Persistent Workflows.",
+  "mentions": [
+    {
+      "number": 373,
+      "text": "RFD 373 Reliable Persistent Workflows"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

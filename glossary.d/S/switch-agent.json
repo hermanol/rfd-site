@@ -1,0 +1,8 @@
+{
+  "term": "Switch Agent",
+  "definition": "A switch agent will run on each of the two servers functioning as switches for the rack in order to support configuration of the switches and manage software updates for switch-specific components on the system.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

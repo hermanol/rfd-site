@@ -1,0 +1,8 @@
+{
+  "term": "QSFP28",
+  "definition": "Quad small form factor pluggable 28 transceiver. An iteration of the SFP28 and QSFP specifications that combine four SFP28 transceivers, allowing for increased data rates. These are commonly used for 100 Gb/s Ethernet.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

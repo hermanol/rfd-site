@@ -72,6 +72,14 @@ export default function Header({ currentRfd }: { currentRfd?: RfdItem }) {
         </div>
 
         <div className="flex space-x-2">
+          <Link
+            to="/glossary"
+            prefetch="intent"
+            className="text-tertiary bg-secondary border-secondary elevation-1 hover:bg-hover flex h-8 w-8 items-center justify-center rounded border"
+            aria-label="Glossary"
+          >
+            <Icon name="document" size={16} />
+          </Link>
           <button
             className="text-tertiary bg-secondary border-secondary elevation-1 hover:bg-hover flex h-8 w-8 items-center justify-center rounded border"
             onClick={toggleSearchMenu}

@@ -1,0 +1,13 @@
+{
+  "term": "Sled",
+  "definition": "A pluggable server in an Oxide Rack. See RFD 14 The Oxide Rack v1.0.",
+  "mentions": [
+    {
+      "number": 14,
+      "text": "The Oxide Rack\nv1"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

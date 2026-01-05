@@ -1,0 +1,8 @@
+{
+  "term": "Blobs",
+  "definition": "Closed-source firmware binaries with little information about their contents. Sometimes known as *binary blobs*.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

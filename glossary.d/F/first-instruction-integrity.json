@@ -1,0 +1,8 @@
+{
+  "term": "First Instruction Integrity",
+  "definition": "All code executed on the host CPU matches what the operator intends (i.e., system firmware hasn’t been replaced). An implementation might rely on the root of trust verifying a signature associated with the firmware and preventing the system from booting if the signature cannot be verified. Facility provided by Hardware Root of Trust.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

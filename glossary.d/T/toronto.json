@@ -1,0 +1,13 @@
+{
+  "term": "Toronto",
+  "definition": "Toronto is the name of Oxide’s second-generation rack switch built around the Xsight Labs X2 Programmable Switch ASIC. See RFD 548 Toronto Rack Switch.",
+  "mentions": [
+    {
+      "number": 548,
+      "text": "RFD 548 Toronto Rack Switch"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [],
+  "public": true
+}

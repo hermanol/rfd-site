@@ -1,0 +1,34 @@
+{
+  "term": "Crucible",
+  "definition": "Oxide's distributed block storage system that provides storage for virtual machine disk images, with downstairs servers running on compute sleds to manage the actual storage on U.2 devices.",
+  "mentions": [
+    {
+      "number": 444,
+      "text": "Crucible Upstairs Refactoring"
+    },
+    {
+      "number": 445,
+      "text": "Crucible Upstairs Backpressure"
+    },
+    {
+      "number": 490,
+      "text": "Packed Crucible extents"
+    },
+    {
+      "number": 518,
+      "text": "Crucible Downstairs Backpressure"
+    }
+  ],
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/crucible",
+      "text": "Crucible Github Repository"
+    },
+    {
+      "url": "https://github.com/oxidecomputer/meta/blob/15ad478730c539efcc2794520d75ffeea7e617e9/engineering/debugging/Crucible.md?plain=1",
+      "text": "Getting Debug Information from Crucible"
+    }
+  ],
+  "public": true
+}

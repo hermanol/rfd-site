@@ -1,0 +1,13 @@
+{
+  "term": "Sled Agent",
+  "definition": "A sled agent will run on each server (including those functioning as switches) to create, update, and destroy Instances, storage resources, and networking resources; inventory hardware and report faults and other notifications to Nexus; and manage software updates for all software on the server.",
+  "mentions": {},
+  "relatedTerms": [],
+  "references": [
+    {
+      "url": "https://github.com/oxidecomputer/omicron/tree/main/omicron-sled-agent",
+      "text": "sled agent"
+    }
+  ],
+  "public": true
+}
